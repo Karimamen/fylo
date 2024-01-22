@@ -1,0 +1,416 @@
+/* start global rulse*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --veryDarkBlueColor: hsl(243, 87%, 12%);
+  --DesaturatedBlueColor: hsl(238, 22%, 44%);
+  --BrightBlue: hsl(224, 93%, 58%);
+  --LightGrayishBlue: hsl(240, 75%, 98%);
+  --LightGray: hsl(0, 0%, 75%);
+  --ModerateCyan: hsl(170, 45%, 43%);
+}
+
+body {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button {
+  color: white;
+  background: var(--BrightBlue);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px var(--LightGray);
+  transition: .3s;
+}
+
+button:hover {
+  background: var(--veryDarkBlueColor);
+  cursor: pointer;
+}
+
+input {
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+::placeholder {
+  text-transform: capitalize;
+  color: var(--LightGray)
+}
+
+/* for responsive */
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end global rulse*/
+/* start nav */
+nav {
+  padding-top: 50px;
+}
+nav .container .logo {
+  width: 130px;
+}
+
+nav .container .links {
+  display: flex;
+}
+
+nav .container .links li {
+  margin-left: 40px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+nav .container .links li:hover {
+  color: var(--DesaturatedBlueColor);
+}
+
+@media(max-width: 768px) {
+  nav .container .links li {
+    margin-left: 20px;
+  }
+}
+
+/* end nav */
+
+/* start landing */
+.landing {
+  position: relative;
+  padding: 100px 0 220px;
+}
+
+.landing .content,
+.landing .image {
+  width: 48%;
+}
+
+.landing .content h1 {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.landing .content .text {
+  min-width: 60%;
+  margin: 20px 10px 0 0;
+  border: 1px solid var(--DesaturatedBlueColor)
+}
+
+.landing .content .start {
+  min-width: 20%;
+  padding: 15px 40px;
+}
+
+.landing .image img {
+  width: 100%;
+}
+
+.bg-desk,
+.bg-mob {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-mob {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .landing {
+    padding: 200px 0 250px;
+  }
+
+  .landing .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .landing .content,
+  .landing .image {
+    width: 100%;
+  }
+
+  .landing .image {
+    margin-bottom: 30px;
+  }
+
+  .landing .content .text,
+  .landing .content .start {
+    width: 100%;
+  }
+
+  .landing .content .text {
+    margin-bottom: 10px;
+  }
+
+  .bg-mob {
+    display: block;
+  }
+
+  .bg-desk {
+    display: none;
+  }
+}
+
+/* end landing*/
+
+/* start sec1 */
+.sec1 {
+  padding: 70px 0 100px;
+  background: var(--LightGrayishBlue)
+}
+.sec1 .text {
+  width: 50%;
+}
+
+.sec1 .text p {
+  width: 80%;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, .5);
+}
+
+.sec1 .text .box {
+  width: 60%;
+  margin-top: 50px;
+  padding: 20px 30px;
+  background: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+}
+
+.sec1 .text .box p {
+  width: 100%;
+  font-size: 13px;
+  margin: 5px 0;
+  color: black;
+}
+
+.sec1 .text a {
+  padding-bottom: 5px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  color: var(--ModerateCyan);
+  border-bottom: 1px solid var(--ModerateCyan);
+  cursor: pointer;
+}
+
+.sec1 .text a img {
+  margin-left: 5px;
+}
+
+.sec1 .text .box div {
+  display: flex;
+  align-items: center;
+}
+
+.sec1 .text .box div img {
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.sec1 .image {
+  width: 45%;
+}
+
+.sec1 .image img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .sec1 .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .sec1 .text,
+  .sec1 .image {
+    width: 100%;
+  }
+
+  .sec1 .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec1 .text p {
+    text-align: start;
+    width: 100%;
+  }
+
+  .sec1 .image {
+    margin-bottom: 100px;
+  }
+}
+
+/* end sec1 */
+/* start sec2 */
+.sec2 {
+  padding: 100px 0;
+  background: var(--DesaturatedBlueColor);
+}
+
+.sec2 .container .text,
+.sec2 .container .start {
+  width: 50%;
+}
+
+.sec2 .container .text h1 {
+  color: white;
+}
+
+.sec2 .container .text p {
+  color: rgba(250, 250, 250, .8);
+}
+
+.sec2 .container .start {
+  width: 40%;
+}
+
+.sec2 .container .start input {
+  width: 100%;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+.sec2 .container .start button {
+  padding: 15px 40px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 768px) {
+  .sec2 .container {
+    flex-direction: column;
+  }
+
+  .sec2 .container .text,
+  .sec2 .container .start {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sec2 .container .text {
+    margin-bottom: 40px;
+  }
+
+  .sec2 .container .start input,
+  .sec2 .container .start button {
+    width: 70%
+  }
+}
+
+/* end sec2 */
+/* start footer */
+footer {
+  padding: 100px 0 0;
+  background: var(--veryDarkBlueColor);
+  color: white;
+}
+
+footer .container {
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+footer .container .logo-f {
+  width: 100%;
+}
+
+footer .container .box1 p {
+  display: flex;
+  align-items: center;
+}
+
+footer .container .box1 p img {
+  margin-right: 20px;
+}
+
+footer .container .box1 .phone {
+  margin: 40px 0 20px;
+}
+
+footer .container .box2 p,
+footer .container .box3 p {
+  margin-bottom: 10px;
+}
+footer .container p{
+  cursor: pointer;
+}
+footer .container p:hover {
+  color: var(--LightGray);
+}
+footer .by {
+  margin-top: 80px;
+  padding: 25px 0 15px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid rgba(250, 250, 250, .5)
+}
+footer .by a {
+  color: var(--LightGray);
+}
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+  }
+  footer .box1,
+  footer .box2 {
+    margin-bottom: 40px
+  }
+}
+
+/* end footer */
